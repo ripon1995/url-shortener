@@ -4,7 +4,7 @@ from django.db import models
 class ShortenedURL(models.Model):
     original_url = models.URLField(max_length=2000, verbose_name="Original URL")
     shortened_url = models.CharField(
-        max_length=20, unique=True, verbose_name="Shortened URL"
+        max_length=30, unique=True, verbose_name="Shortened URL"
     )
     created_at = models.DateTimeField(auto_now_add=True, verbose_name="Created At")
 
