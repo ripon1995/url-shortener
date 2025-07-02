@@ -1,7 +1,9 @@
 from django.urls import path
 
-from .views import CreateShortenerUrl
+from .views import ShortenUrlListCreateAPIView
 
 urlpatterns = [
-    path("shorten/", CreateShortenerUrl.as_view(), name="create_shortened_url"),
+    path(
+        "shortens/", ShortenUrlListCreateAPIView.as_view(), name="create_shortened_url"
+    ),
 ]
