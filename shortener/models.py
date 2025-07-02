@@ -7,8 +7,6 @@ class ShortenedURL(models.Model):
         max_length=20, unique=True, verbose_name="Shortened URL"
     )
     created_at = models.DateTimeField(auto_now_add=True, verbose_name="Created At")
-    updated_at = models.DateTimeField(auto_now=True, verbose_name="Updated At")
-    is_active = models.BooleanField(default=True, verbose_name="Is Active")
 
     class Meta:
         verbose_name = "Shortened URL"
