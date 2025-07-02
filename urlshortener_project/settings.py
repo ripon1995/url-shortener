@@ -77,8 +77,12 @@ WSGI_APPLICATION = "urlshortener_project.wsgi.application"
 
 DATABASES = {
     "default": {
-        "ENGINE": "django.db.backends.sqlite3",
-        "NAME": BASE_DIR / "db.sqlite3",
+        "ENGINE": "django.db.backends.postgresql",
+        "NAME": "urlshortener_db",
+        "USER": "postgres",
+        "PASSWORD": "rootless",
+        "HOST": "127.0.0.1",
+        "PORT": "5432",
     }
 }
 
